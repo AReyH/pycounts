@@ -3,7 +3,26 @@ from string import punctuation
 
 
 def load_text(input_file):
-    """Load text from a text file and return as a string."""
+    
+    """Count words in a text file.
+
+    Words are made lowercase and punctuation is removed 
+    before counting.
+
+    Parameters
+    ----------
+    input_file : str
+        Path to text file.
+
+    Returns
+    -------
+    collections.Counter
+        dict-like object where keys are words and values are counts.
+
+    Examples
+    --------
+    >>> count_words("text.txt")
+    """
     with open(input_file, "r") as file:
         text = file.read()
     return text
